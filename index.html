@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Password Generator -->
+    <div class="container">
+      <h1>Password Generator</h1>
+      <label for="length">Password Length:</label>
+      <input type="number" id="length" min="4" max="50" value="12">
+  
+      <div class="options">
+        <label><input type="checkbox" id="uppercase" checked> Include Uppercase</label>
+        <label><input type="checkbox" id="lowercase" checked> Include Lowercase</label>
+        <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+        <label><input type="checkbox" id="symbols"> Include Symbols</label>
+      </div>
+  
+      <button id="generate">Generate Password</button>
+  
+      <div class="output-group">
+        <input type="text" id="result" readonly placeholder="Your password will appear here">
+        <button id="copy" title="Copy password"><img src="copy.svg" alt="Copy Button"></button>
+      </div>
+      <p id="copyMessage" class="message"></p>
+    </div>
+  
+    <!-- Password Strength Checker -->
+    <div class="container">
+      <h1>Password Strength Checker</h1>
+      <div class="check-group">
+        <input type="text" id="checkPassword" placeholder="Type or paste a password">
+        <button id="checkBtn">Check</button>
+      </div>
+      <p id="checkMessage" class="message"></p>
+      <div id="strengthOutput">Strength: <strong>None</strong></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
